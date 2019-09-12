@@ -53,4 +53,13 @@ async function remove() {
     console.log(res);
 }
 
-remove();
+async function crd() {
+    //run `kubectl apply -f crd.json` first
+    const crd = require('./crd.json')
+    kube.addCustomResourceDefinition(crd);
+    const body = require('./cr.json');
+    const res = await kube.apis['mdc.aerogear.org'].v1alpha1.namespaces('default').mobileclients.post({body: body});
+    console.log(res);  
+}
+
+crd();

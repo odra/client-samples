@@ -1,0 +1,15 @@
+{
+  "apiVersion": "mdc.aerogear.org/v1alpha1",
+  "kind": "MobileClient",
+  "metadata": {
+    "name": "myapp"
+  },
+  "spec": {
+    "name": "myapp",
+    "apiKey": "11111111-1111-1111-1111-11111111111",
+    "dmzUrl": ""
+  },
+  "status": {
+    "services": []
+  }
+}
